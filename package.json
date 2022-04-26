@@ -1,0 +1,19 @@
+{
+  "name": "target-language2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pedro-Gagliardi/proyecto-target-language.git"
+  },
+  "author": "Pedro Gagliardi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pedro-Gagliardi/proyecto-target-language/issues"
+  },
+  "homepage": "https://github.com/Pedro-Gagliardi/proyecto-target-language#readme"
+}
