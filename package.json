@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon ./bin/www"
+=======
+    "start": "node ./bin/www"
+>>>>>>> a895445044c34ef2cd71cc9c67b874f028820457
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
