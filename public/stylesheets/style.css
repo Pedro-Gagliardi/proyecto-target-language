@@ -1,8 +1,381 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* Sacamos los márgenes predeterminados*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/** Tipografía de Google fonts**/
+body {    
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Diseño y "comportamiento" de la imagen de fondo (ver colores target)*/
+.hero {
+  background-image: linear-gradient(120deg, rgba(241, 147, 251, 0.699) 0%, rgba(85, 27, 35, 0.692) 100%), url("/images/header.jpg");
+  width: 100%;
+  height: 650px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+} 
+
+.textosHero {
+  height: 500px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textosHero h1 {
+  font-size: 60px;
+}
+
+.textosHero p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+/* Diseño de los lins (ver colores target) */
+.textosHero a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 15px;
+  background: #a18cd1;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.svgHero {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Estilos generales */
+
+.contenedor,
+.waveContenedor {
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 0 80px 0;
+}
+
+.contenedor {
+  padding: 80px 0;
+}
+
+.titulo {
+  font-weight: 300;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo .left {
+  text-align: left;
+}
+
+.titulo .right {
+  text-align: right;
+}
+
+/* Section */
+
+.website {
+  display: flex;
+  justify-content: space-between;
+}
+
+.website img {
+  width: 48%;
+}
+
+.website .contenedorTextosMain {
+  width: 40%;
+}
+
+.parrafo {
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  padding: 12px 15px;
+  border-radius: 10px;
+  color: #fff;    
+}
+
+/* Info */
+
+.info {
+  background: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  color: #fff;
+}
+
+/* Cards */
+
+.contentCards {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 30%;
+  text-align: center;
+  height: 300px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+  transform: scale(1);
+  transition: transform 0.6s;
+}
+
+.card:hover {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  transform: scale(1.03);
+  cursor: pointer;    
+}
+
+.card i {
+  margin: 30px 0 20px 0;
+  color: #6991c7;
+  font-size: 40px;
+}
+
+.card p {
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+/* Galería */
+
+.galeria {
+  background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}
+
+.galeriaCont {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+.galeriaCont>img {
+  width: 40%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Info 2 */
+
+.lastSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.lastSection img {
+  width: 48%;
+}
+
+.lastSection .contenedorTextosMain {
+  width: 40%;
+}
+
+.redesSociales {  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; 
+  padding: 40px;    
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+.redesSociales a {
+  text-decoration: none;
+  font-size: 35px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 20%;
+  background-color: #fef8e8;
+  color: #5271ff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+}
+
+.redesSociales a:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+
+footer {
+  background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input {
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: #fff;
+  border: 1px solid #fef9d7;
+  padding: 20px 10px;
+}
+
+.input::placeholder {
+  color: #fff;
+  font-family: "raleway";
+}
+
+.input[type="text"],
+.input[type="email"]{
+  display: inline-block;
+  width: 49%;
+  margin-bottom: 30px;
+}
+
+form textarea {
+  width: 100%;    
+  margin-bottom: 15px;
+}
+
+.input[type="submit"]{
+  width: 120px;
+  text-align: center;
+  padding: 14px 0;
+}
+
+.input[type="submit"]:hover{
+  cursor: pointer;
+  color: #f68084;
+  background: #fff;
+}
+
+/* Diseño responsive */
+
+@media screen and (max-width:800px){
+
+  /* Estilos generales */
+
+  .textosHero h1 {
+      text-align: center;
+      font-size: 50px;        
+  }
+
+  .titulo {
+      font-size: 35px;
+  }
+
+  .titulo .left {
+      text-align: center;
+  }
+
+  .info p {
+      text-align: center;
+  }
+
+  /* Section */
+
+  .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding-right: 20px;
+      padding-left: 20px;
+  }
+
+  .website {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .website img {
+      width: 100%;
+  }
+
+  .website .contenedorTextosMain {
+      width: 100%;
+  }
+
+  /* Cards */
+
+  .card {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+
+  /* Galería */
+
+  .galeriaCont>img {
+      width: 48%;
+  }
+
+  /*Last*/
+
+  .lastSection img {
+      width: 98%;
+  }
+
+  .lastSection .contenedorTextosMain {
+      width: 98%;
+      margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width:400px){
+  .titulo,
+  .textosHero h1 {
+      font-size: 30px;
+  }
+
+  .textosHero p {
+      font-size: 20px;
+      text-align: center;
+  }
+
+  .card {
+      height: 400px;
+  }
+
+  .website .contenedorTextosMain {
+      margin-bottom: 30px;
+  }
+
+  .galeriaCont>img {
+      width: 97%;
+  }
 }

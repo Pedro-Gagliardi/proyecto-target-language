@@ -4,14 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config();
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-<<<<<<< HEAD
-var nosotrosRouter = require('./routes/nosotros'); 
-var servicioRouter = require('./routes/servicio'); 
-var contactoRouter = require('./routes/contacto'); 
-=======
->>>>>>> a895445044c34ef2cd71cc9c67b874f028820457
 
 var app = express();
 
@@ -27,16 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-<<<<<<< HEAD
-app.use('/nosotros', nosotrosRouter);
-app.use('/servicio', servicioRouter);
-app.use('/contacto', contactoRouter);
-
-app.get('/prueba', function(req, res){
-  res.send('Hola, soy la pagina de prueba')
-});
-=======
->>>>>>> a895445044c34ef2cd71cc9c67b874f028820457
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
