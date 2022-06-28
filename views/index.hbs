@@ -14,37 +14,31 @@
 
 <!-- Inicio sección 1 -->
 <section class="waveContenedor website">
-    <img src="/public/images/ilustracion.svg" alt="" />
+    <img src="images/ilustracion1.svg" alt="" />
     <div class="contenedorTextosMain">
-        <h2 class="contenedorTextosMain">Título de la sección</h2>
+        <h2 class="contenedorTextosMain">Estamos para ayudarte!</h2>
         <p class="parrafo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            distinctio in amet voluptatum laborum deleniti excepturi natus tempora
-            nostrum dolores inventore suscipit corrupti, asperiores culpa autem
-            quis itaque totam hic. Dolores odio non veritatis placeat error unde,
-            possimus pariatur sed expedita, necessitatibus commodi ipsum minus
-            facere. Laudantium totam tenetur asperiores corrupti a dolorum vel ab
-            doloribus architecto, fuga placeat distinctio? Soluta possimus
-            quisqmpedit nulla fugiat nesciunt. Accusantium laborum debitis, non
-            aliquam incidunt modi corrupti.
+            Presentanos tu proyecto y te asesoraremos de inmediato para darte diferentes opciones
+            adaptables a tus necesidades. Trabajamos con particulare, empresas y embajadas.
+            Nuestros servicios tienen valor legal, ya que nos avala el Colegio de Traductores
+            Públicos de la Ciudad de Buenos Aires.
         </p>
-        <a href="" class="cta">Aprende más</a>
     </div>
 </section>
 <!-- Fin sección 1 -->
 
- <!-- Inicio sección 2 (Descripción + párrafo) -->
+<!-- Inicio sección 2 (Descripción + párrafo) -->
 <section class="info">
     <div class="contenedor">
-        <h2 class="titulo left">Juntos podemos apoyar</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h2 class="titulo left">Brindamos todo tipo de opciones</h2>
+        <p>Traducciones técnicas y literarias.</p>
     </div>
 </section>
 <!-- Fin sección 2 -->
 
-<!-- Inicio sección 3 (cards) -->
+<!-- Inicio sección 3 (cards) esperando peticiones del cliente-->
 <section class="cards contenedor">
-    <h2 class="titulo">Nuestros servicos</h2>
+    <h2 class="titulo">Quienes somos</h2>
     <div class="contentCards">
         <article class="card">
             <i class="far fa-clone"></i>
@@ -68,23 +62,39 @@
 </section>
 <!-- Fin sección 3 -->
 
-<!-- Inicio sección 4 (Nuestro trabajo) -->
-<section class="galeria">
-    <div class="contenedor">
-        <h2 class="titulo">Nuestro trabajo</h2>
-        <article class="galeriaCont">
-            <img src="/public/images/img-index1.png" alt="" />
-            <img src="img/img-index2.png" alt="" />
-            <img src="img/img-index3.png" alt="" />
-            <img src="img/img-index4.png" alt="" />
-            <img src="img/img-index1.png" alt="" />
-            <img src="img/img-index2.png" alt="" />
-            <img src="img/img-index3.png" alt="" />
-            <img src="img/img-index4.png" alt="" />
-        </article>
-    </div>
-</section>
-<!-- Fin sección 4 -->
+<!-- Inicio sección 4 (Novedades) -->
+<div id="novedades" class="row py-4 table table">
+    <div class="col-md-5 offset-md-2 py-3">
+        <h2>Novedades</h2>
+        <ul class="lista-novedades">
+            {{#each novedades}}
+            <li>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}">{{titulo}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>    
+</div>
+
+<!-- Inicia modal -->
+{{#each novedades}}
+<div class="modal fade" id="modal{{id}}" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">{{titulo}}</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2>{{subtitulo}}</h2>
+                <p>{{cuerpo}}</p>
+            </div>
+        </div>
+    </div>    
+</div>
+{{/each}}
 
 <!-- Inicio sección 5 (opcional según quiera cliente) -->
 <section class="infoLast">

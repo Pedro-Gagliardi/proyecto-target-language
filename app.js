@@ -9,14 +9,13 @@ require('dotenv').config();
 var connection = require('./models/bd');
 
 var session = require('express-session');
+var fileUpload = require('express-fileupload');
 
-require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
-
 
 var app = express();
 
@@ -65,6 +64,11 @@ secured = async(req, res, next) => {
     console.log(error);
   }
 };
+
+app.use(fileUpload( {
+  useTempFiles: true,
+  tempFileDir: '/tmp'
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
